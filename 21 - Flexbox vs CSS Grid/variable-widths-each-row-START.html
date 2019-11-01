@@ -21,10 +21,20 @@
     <div class="item">Short</div>
   </div>
   <style>
-    .flex-container {}
+    /* flex is better here for aligning items */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+         /* to add flex gap without issues*/
+         margin: -10px;
+
+    }
 
     .flex-container>* {
-      margin: 10px;
+         /* to add flex gap without issues*/
+         margin: 10px;
+      /* to align perfectly */
+flex: 1;
     }
   </style>
 </body>

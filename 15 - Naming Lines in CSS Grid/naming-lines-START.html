@@ -46,8 +46,12 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: 1fr 500px 1fr;
+      /* can have 2 names at once */
+      grid-template-columns: [side-start side-bar] 1fr [side-end] 500px [content-start] 1fr [content-end];
       grid-template-rows: repeat(10, auto);
+    }
+    .item1 {
+      grid-column: side-start/content-start;
     }
   </style>
 </body>

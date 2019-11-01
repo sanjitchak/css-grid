@@ -10,7 +10,7 @@
 
 <body>
   <div class="container">
-    <div class="itm itm1">1</div>
+    <div class="itm itm1">111111111111111111</div>
     <div class="itm itm2">2</div>
     <div class="itm itm3">3</div>
     <div class="itm itm4">4</div>
@@ -66,11 +66,27 @@
       justify-* is row axis
       align-* is column axis
     */
-
+.itm {
+  background: white;
+}
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(5, 130px);
+ 
+      /* justify-items: center;
+      align-items:center; */
+    place-items: stretch stretch;
+
+    /* useful for less items than the viewport */
+    justify-content: space-around;
+    /* if row height is big
+    align-content: space-around; */
+    }
+
+    .item1 {
+      justify-self: center;
+      align-self: center;
     }
   </style>
 </body>

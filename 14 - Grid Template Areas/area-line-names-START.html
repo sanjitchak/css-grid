@@ -46,6 +46,18 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      /* areas have spaces */
+      grid-template-areas:  "l l l l m m m m"
+      "l l l l m m m m"
+      "l l l l m m m m"
+      "l l l l m m m m"
+      ;
+    
+    }
+    .item3 {
+      /* grid-area: l; */
+      grid-column: l-start/ l-end;
+      grid-row: l-start;
     }
   </style>
 </body>

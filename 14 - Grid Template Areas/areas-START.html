@@ -29,6 +29,35 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-rows: 150px 150px 100px;
+      grid-template-columns: 1fr 500px 1fr;
+      /* AREA name will be aligned in same row or column */
+      grid-template-areas: "sidebar1 content sidebar2"
+        "sidebar4 content sidebar2"
+        "footer footer footer";
+    }
+
+    .item1 {
+      grid-area: sidebar4;
+    }
+
+    .item2 {
+      grid-area: content;
+    }
+
+    .item3 {
+      grid-area: sidebar2;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+    @media (max-width: 700px) {
+    .container{
+      grid-template-areas: "footer content sidebar2"
+        "footer content sidebar2"
+        "footer content sidebar1";
+    }
     }
   </style>
 </body>
